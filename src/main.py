@@ -1,12 +1,13 @@
 from fastapi import FastAPI
 
-from src.routers import event_request, event_task
+from src.routers import event_request, event_task, staff_request
 
 app = FastAPI()
 
 
 app.include_router(event_request.router)
 app.include_router(event_task.router)
+app.include_router(staff_request.router)
 
 
 @app.get("/")

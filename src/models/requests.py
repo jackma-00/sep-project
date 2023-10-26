@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, conint
 from datetime import date
 
 
@@ -19,3 +19,11 @@ class EventRequest(BaseModel):
     expected_attenders: int
     preferences: Preferences
     expected_budget: int
+
+
+class StaffRequest(BaseModel):
+    contract_type: conint(ge=0, le=1)
+    requesting_department: conint(ge=0, le=3)
+    years_of_experience: int
+    job_title: str
+    job_description: str
