@@ -1,0 +1,9 @@
+.dockerignore
+.venv/
+build/
+dist/
+*.egg-info/
+.gitignore
+Makefile
+test_*.py
+__pycache__/
