@@ -1,0 +1,16 @@
+{
+    "record_number": "f99c5414-65fa-488e-95d2-d20d30ffc384",
+    "client_name": "John",
+    "event_type": "disco_party",
+    "from_date": "2023-10-30",
+    "to_date": "2023-11-01",
+    "expected_attenders": 60,
+    "preferences": {
+        "decorations": false,
+        "parties": true,
+        "photos": true,
+        "food": false,
+        "drinks": true
+    },
+    "expected_budget": 1000
+}

@@ -1,0 +1,16 @@
+{
+    "record_number": "47bbe6a9-1e69-4809-9aed-0fc9232ab9e2",
+    "client_name": "Stacy",
+    "event_type": "dinner_party",
+    "from_date": "2023-10-29",
+    "to_date": "2023-10-30",
+    "expected_attenders": 20,
+    "preferences": {
+        "decorations": false,
+        "parties": false,
+        "photos": false,
+        "food": true,
+        "drinks": true
+    },
+    "expected_budget": 200
+}
