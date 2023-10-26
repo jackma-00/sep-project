@@ -27,3 +27,10 @@ class StaffRequest(BaseModel):
     years_of_experience: int
     job_title: str
     job_description: str
+
+
+class FinancialRequest(BaseModel):
+    requesting_department: conint(ge=0, le=3)
+    project_reference: str
+    required_amount: int
+    reason: str

@@ -1,4 +1,4 @@
-from src.models.requests import EventRequest, StaffRequest
+from src.models.requests import EventRequest, StaffRequest, FinancialRequest
 from src.models.task import EventTask
 
 
@@ -6,6 +6,7 @@ class DataManager:
     event_request_dictionary = {}
     task_dictionary = {}
     staff_request_list = []
+    financial_request_dictionary = {}
 
     # Event Request
 
@@ -90,6 +91,30 @@ class DataManager:
             self.staff_request_list.remove(oldRequest)
         else:
             raise TypeError("Staff request not found !")
+
+    # Financial Request
+
+    def add_financial_request(self, newRequest):
+        if isinstance(newRequest, FinancialRequest):
+            self.financial_request_dictionary[newRequest.project_reference] = newRequest
+        else:
+            raise TypeError(
+                "Error adding new event request ! Only EventRequest are allowed !"
+            )
+
+    def get_financial_requests(self):
+        return self.financial_request_dictionary
+
+    def get_financial_request(self, project_reference):
+        if project_reference in self.financial_request_dictionary.keys():
+            return self.financial_request_dictionary[project_reference]
+        raise TypeError("Financial request not found !")
+
+    def delete_financial_request(self, project_reference):
+        if project_reference in self.financial_request_dictionary.keys():
+            del self.financial_request_dictionary[project_reference]
+        else:
+            raise TypeError("Financial request not found !")
 
 
 # DataManager instance
