@@ -1,14 +1,12 @@
 from fastapi import APIRouter
 
-from src.persistence.data_manager import DataManager
+from src.persistence.data_manager import dataManager
 from src.models.requests import EventRequest
 
 
 router = APIRouter()
 
 print("Starting HTTP RESTful API Server ...")
-
-dataManager = DataManager()
 
 
 @router.post("/event_requests/")

@@ -1,10 +1,11 @@
-from src.models.requests import EventRequest
+from src.models.requests import EventRequest, StaffRequest
 from src.models.task import EventTask
 
 
 class DataManager:
     event_request_dictionary = {}
     task_dictionary = {}
+    staff_request_list = []
 
     # Event Request
 
@@ -70,3 +71,27 @@ class DataManager:
             self.task_dictionary[project_ref] = [
                 task for task in project_tasks if task.assign_to != assigned_to
             ]
+
+    # Staff Request
+
+    def add_staff_request(self, newRequest):
+        if isinstance(newRequest, StaffRequest):
+            self.staff_request_list.append(newRequest)
+        else:
+            raise TypeError(
+                "Error adding new staff request ! Only StaffRequest are allowed !"
+            )
+
+    def get_staff_requests(self):
+        return self.staff_request_list
+
+    def delete_staff_request(self, oldRequest):
+        if oldRequest in self.staff_request_list:
+            self.staff_request_list.remove(oldRequest)
+        else:
+            raise TypeError("Staff request not found !")
+
+
+# DataManager instance
+
+dataManager = DataManager()
