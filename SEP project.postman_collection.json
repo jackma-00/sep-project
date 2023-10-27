@@ -1,0 +1,865 @@
+{
+	"info": {
+		"_postman_id": "f02beacb-5ee1-48c5-9e62-396ec86e2bb1",
+		"name": "SEP project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23423906",
+		"_collection_link": "https://restless-meadow-584101.postman.co/workspace/New-Team-Workspace~1cf43edb-c402-4950-a727-5c86b44a83ce/collection/23423906-f02beacb-5ee1-48c5-9e62-396ec86e2bb1?action=share&source=collection_link&creator=23423906"
+	},
+	"item": [
+		{
+			"name": "Event Requests",
+			"item": [
+				{
+					"name": "New Request 1",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "pswd",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "sarah",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"record_number\": \"f99c5414-65fa-488e-95d2-d20d30ffc384\",\n    \"client_name\": \"John\",\n    \"event_type\": \"disco_party\",\n    \"from_date\": \"2023-10-30\",\n    \"to_date\": \"2023-11-01\",\n    \"expected_attenders\": 60,\n    \"preferences\": {\n        \"decorations\": false,\n        \"parties\": true,\n        \"photos\": true,\n        \"food\": false,\n        \"drinks\": true\n    },\n    \"expected_budget\": 1000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/event_requests/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"event_requests",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request 2",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "sam",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "pswd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"record_number\": \"47bbe6a9-1e69-4809-9aed-0fc9232ab9e2\",\n    \"client_name\": \"Stacy\",\n    \"event_type\": \"dinner_party\",\n    \"from_date\": \"2023-10-29\",\n    \"to_date\": \"2023-10-30\",\n    \"expected_attenders\": 20,\n    \"preferences\": {\n        \"decorations\": false,\n        \"parties\": false,\n        \"photos\": false,\n        \"food\": true,\n        \"drinks\": true\n    },\n    \"expected_budget\": 200\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/event_requests/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"event_requests",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Request 1",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "janet",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "pswd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/event_requests/f99c5414-65fa-488e-95d2-d20d30ffc384",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"event_requests",
+								"f99c5414-65fa-488e-95d2-d20d30ffc384"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Requests",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "janet",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "pswd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/event_requests/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"event_requests",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Request 1",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "janet",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "pswd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/event_requests/f99c5414-65fa-488e-95d2-d20d30ffc384",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"event_requests",
+								"f99c5414-65fa-488e-95d2-d20d30ffc384"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Event Tasks",
+			"item": [
+				{
+					"name": "New Task 1",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "natalie",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "pswd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"project_reference\": \"f99c5414-65fa-488e-95d2-d20d30ffc384\",\n    \"description\": \"Buy ingredients for cocktails\",\n    \"assign_to\": \"Amber\",\n    \"priority\": \"high\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/tasks/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"tasks",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Task 2",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "jack",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "pswd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"project_reference\": \"f99c5414-65fa-488e-95d2-d20d30ffc384\",\n    \"description\": \"Prepare playlist\",\n    \"assign_to\": \"Rich\",\n    \"priority\": \"medium\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/tasks/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"tasks",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Task 3",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "jack",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "pswd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"project_reference\": \"47bbe6a9-1e69-4809-9aed-0fc9232ab9e2\",\n    \"description\": \"Buy ingredients for dinner\",\n    \"assign_to\": \"Amber\",\n    \"priority\": \"high\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/tasks/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"tasks",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Tasks",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "jack",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "pswd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/tasks/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"tasks",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Assignee Tasks",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "amber",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "pswd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/tasks/projects/Amber",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"tasks",
+								"projects",
+								"Amber"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Project Tasks",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "natalie",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "pswd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/tasks/f99c5414-65fa-488e-95d2-d20d30ffc384",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"tasks",
+								"f99c5414-65fa-488e-95d2-d20d30ffc384"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Assignee Tasks",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "amber",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "pswd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/tasks/projects/Amber",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"tasks",
+								"projects",
+								"Amber"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Project Tasks",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "jack",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "pswd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/tasks/47bbe6a9-1e69-4809-9aed-0fc9232ab9e2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"tasks",
+								"47bbe6a9-1e69-4809-9aed-0fc9232ab9e2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Staff Requests",
+			"item": [
+				{
+					"name": "New Request 1",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "jack",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "pswd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"contract_type\": 0,\n    \"requesting_department\": 3,\n    \"years_of_experience\": 1,\n    \"job_title\": \"Assistant\",\n    \"job_description\": \"Assist the HR Manager\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/staff_requests/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"staff_requests",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Requests",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "simon",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "pswd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/staff_requests/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"staff_requests",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Request 1",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "simon",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "pswd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"contract_type\": 0,\n    \"requesting_department\": 3,\n    \"years_of_experience\": 1,\n    \"job_title\": \"Assistant\",\n    \"job_description\": \"Assist the HR Manager\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/staff_requests/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"staff_requests",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Financial Requests",
+			"item": [
+				{
+					"name": "New Request 1",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "jack",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "pswd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"requesting_department\": 2,\n    \"project_reference\": \"47bbe6a9-1e69-4809-9aed-0fc9232ab9e2\", \n    \"required_amount\": 300,\n    \"reason\": \"Not enough food with the initial budget\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/financial_requests/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"financial_requests",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Requests",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "alice",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "pswd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/financial_requests/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"financial_requests",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Request 1",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "alice",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "pswd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/financial_requests/47bbe6a9-1e69-4809-9aed-0fc9232ab9e2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"financial_requests",
+								"47bbe6a9-1e69-4809-9aed-0fc9232ab9e2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Request 1",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "alice",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "pswd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/financial_requests/47bbe6a9-1e69-4809-9aed-0fc9232ab9e2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"financial_requests",
+								"47bbe6a9-1e69-4809-9aed-0fc9232ab9e2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
