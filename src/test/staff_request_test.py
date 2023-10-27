@@ -13,18 +13,22 @@ with open(
 
 
 def test_add_request1():
-    response = client.post("/staff_requests/", json=staff_request_1)
+    response = client.post(
+        "/staff_requests/", json=staff_request_1, auth=("jack", "pswd")
+    )
     assert response.status_code == 200
     assert response.json() == {"add": "ok"}
 
 
 def test_get_requests():
-    response = client.get("/staff_requests/")
+    response = client.get("/staff_requests/", auth=("simon", "pswd"))
     assert response.status_code == 200
     assert response.json() == {"staff_requests": [staff_request_1]}
 
 
 def test_discard_request():
-    response = client.put("/staff_requests/", json=staff_request_1)
+    response = client.put(
+        "/staff_requests/", json=staff_request_1, auth=("simon", "pswd")
+    )
     assert response.status_code == 200
     assert response.json() == {"delete": "ok"}

@@ -1,0 +1,23 @@
+{
+    "customer_service": [
+        "sarah",
+        "sam"
+    ],
+    "customer_manager": [
+        "janet"
+    ],
+    "hr_manager": [
+        "simon"
+    ],
+    "financial_manager": [
+        "alice"
+    ],
+    "production_manager": [
+        "jack",
+        "natalie"
+    ],
+    "production_team": [
+        "rich",
+        "amber"
+    ]
+}
